@@ -1,8 +1,11 @@
 # git conflict mode
 
+Basic mode for navigating conflicted files in git
+
 You probably don't want to use this yet.
 
-## Basic mode for navigating conflicted files in git
+Based on some code from
+[buster mode](https://github.com/magnars/buster-mode/).
 
 ## Supported Opertations:
 
