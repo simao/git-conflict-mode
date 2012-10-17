@@ -1,11 +1,11 @@
 (let* ((current-directory (file-name-directory load-file-name))
        (features-directory (expand-file-name ".." current-directory))
        (project-directory (expand-file-name ".." features-directory)))
-  (setq buster-mode-root-path project-directory)
-  (setq buster-mode-util-path (expand-file-name "util" project-directory)))
+  (setq git-conflict-mode-root-path project-directory)
+  (setq git-conflict-mode-util-path (expand-file-name "util" project-directory)))
 
-(add-to-list 'load-path buster-mode-root-path)
-(add-to-list 'load-path (expand-file-name "espuds" buster-mode-util-path))
+(add-to-list 'load-path git-conflict-mode-root-path)
+(add-to-list 'load-path (expand-file-name "espuds" git-conflict-mode-util-path))
 
 (require 'git-conflict-mode)
 (require 'espuds)
