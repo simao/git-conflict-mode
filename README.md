@@ -11,6 +11,6 @@ Based on some code from
 
 - `C-c C-g ut` Use changes in "other" revisio
 - `C-c C-g um` Use changes in HEAD
-- `C-c C-g nc` Go to next conflict
-- `C-c C-g pc` Go to previous conflict
+- `<f11>` Go to next conflict
+- `S-<f11>` Go to previous conflict
 - `C-c C-g tc` Go to changes in "other" revision 

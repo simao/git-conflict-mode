@@ -23,8 +23,9 @@
 (defun gcm-previous-conflict ()
   (interactive)
   (move-end-of-line nil)
-  (search-backward-regexp gcm-start-current-marker nil nil 2)
-  (forward-line 1))
+  (if (search-backward-regexp gcm-start-current-marker nil t 2)
+      (forward-line 1)
+    (message "There is no previous conflict")))
 
 (defun gcm-use-theirs ()
   (interactive)
@@ -58,10 +59,10 @@
   (kbd "C-c C-g um") 'gcm-use-mine)
 
 (define-key git-conflict-mode-map
-  (kbd "<F11>") 'gcm-next-conflict)
+  (kbd "<f11>") 'gcm-next-conflict)
 
 (define-key git-conflict-mode-map
-  (kbd "S-<F11>") 'gcm-previous-conflict)
+  (kbd "S-<f11>") 'gcm-previous-conflict)
 
 (define-key git-conflict-mode-map
   (kbd "<F12>") 'gcm-goto-their-changes)
